@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario bros </title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000px" height="1000px"></canvas>
+    <script type="text/javascript">
+        const myCanvas = document.getElementById("canvas");
+        const ctx = myCanvas.getContext("2d");
+
+
+        ctx.fillStyle = "#28e4e0";
+        ctx.fillRect(0, 0, 1000, 820);
+
+
+        //ctx.beginPath();
+        ctx.fillStyle = "#efb262";
+        ctx.fillRect(0, 770, 1000, 50);
+        //ctx.stroke();
+
+
+        ctx.fillStyle = "#ff8f5f";
+        ctx.fillRect(80, 180, 60, 60);
+        ctx.stroke();
+
+        ctx.fillStyle = "#ff8f5f";
+        ctx.fillRect(180, 80, 60, 60);
+
+        ctx.fillStyle = "#ff8f5f";
+        ctx.fillRect(240, 80, 60, 60);
+
+        ctx.fillStyle = "#ffc3b8";
+        ctx.fillRect(240, 570, 200, 200);
+
+        ctx.fillStyle = "#3677ba";
+        ctx.fillRect(440, 370, 200, 400);
+
+        ctx.fillStyle = "#188813";
+        ctx.fillRect(820, 420, 150, 350);
+
+        ctx.fillStyle = "#188813";
+        ctx.fillRect(780, 420, 250, 150);
+
+        var img = new Image();
+        img.src = "planta.png";
+        img.onload = function () {
+            ctx.drawImage(img, 790, 220, 200, 200);
+        };
+
+
+        var img1 = new Image();
+        img1.src = "Mario.jpg";
+        img1.onload = function () {
+            ctx.drawImage(img1, 50, 570, 170, 200);
+        };
+
+
+        ctx.beginPath();
+        ctx.arc(260, 600, 10, 0, Math.PI * 2, true);
+        ctx.arc(420, 600, 10, 0, Math.PI * 2, true);
+    
+        ctx.fillStyle = "#000000";
+
+        ctx.fill();
+
+    </script>
+</body>
+
+</html>
